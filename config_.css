@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Space+Grotesk:wght@500;700&family=Oswald:wght@500;700&display=swap');
+
+:root {
+    /* Global variable */
+        /* All Color text */
+        --all_color_text : rgb(248, 249, 250);
+        /*all font-family text */
+        --all_font-family : 'Poppins', sans-serif;
+    /* Variable of Picture ) */
+        /* Picture */
+        --picture: 250px;
+
+    /* Variable of top Titel / presentation  */
+        /* Titel */
+        --titel: clamp(2rem , 5vw , 2.5rem );
+        /* Small presentation */    
+        --presentation: clamp(1rem , 4vw , 1.5rem );
+        /* Color name */
+        --color_name: rgb(124, 58, 237) ; 
+        /*font-family for my name*/
+        --family_name : 'Space Grotesk', sans-serif ;
+
+     /* global variable of carrousel of slide */
+        /*height for bottom distance*/
+       --distance_bottom_carrousel  : 20px;
+
+       /* Variable of carrousel of slide */ 
+        /* width of carrousel */
+        --width_carrousel: clamp(40%, calc(90% - 5vw), 70%);
+        /* fronsize txt*/
+        --fronsize_txt : clamp(25px,5vw, 60px);
+        /* option_border*/
+        --option_border : 4px solid rgb(230, 230, 230) ;
+        /* Color-size */
+        --color-size : rgb(37, 99, 235);
+
+    /* Variable of carrousel of botten */
+        /* Wild of button  */
+        --wild_button : clamp(30px,3vw,40px);
+        /* Color button */
+        --color_button  : rgb(255, 255, 255);
+
+
+    /* Variable of paige tel / gmail / projet / CV */
+        /* Wild of tel  */
+        --fronsize_tel : clamp(16px,3vw,20px);
+        /* Style of button  */
+        --family_tel :  'Inter', sans-serif; ;
+        /* Color button */
+        --color_button_tel  : rgb(255, 255, 255);
+        /* fronsize my cv */
+        --fronsize_cv : clamp(16    px , 3vw , 26px);
+};

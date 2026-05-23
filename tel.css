@@ -1,0 +1,28 @@
+@import "config_.css";
+
+.tel_conteneur{
+    width: 100%;
+    margin-top: 50px;
+  
+
+}
+.action_tell_copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.mytel{
+    position: relative;
+
+    font-size: calc(var(--presentation) + 2px);
+    font-family: var(--family_tel);
+}
+.my_tel_txt{
+    text-align: center;
+    font-family: var(--family_tel);
+    font-size: calc(var(--presentation) + 2px);
+
+}

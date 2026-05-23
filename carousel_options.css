@@ -1,0 +1,70 @@
+@import "config_.css";
+
+.container_carrousel {
+    width: var(--width_carrousel);
+    overflow-x: hidden;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Carousel_Options { 
+    
+    width: 100%;
+    gap: 20px;
+    display: flex;  
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;     
+}
+
+.laaa {
+    margin-bottom: calc(var(--distance_bottom_carrousel) + var(--wild_button));
+    flex: 0 0 100%;
+    display: flex;
+    position: relative;
+    scroll-snap-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.laaa>h2{
+    margin: 5px;
+    text-align: center;
+    font-size: var(--fronsize_txt); 
+    font-family: var(--all_font-family);
+    color:var(--all_color_text); 
+    
+
+}
+
+.laaa>h3{ 
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color:var(--all_color_text); 
+    font-size: calc(var(--fronsize_txt) - 2px); 
+    white-space: nowrap;
+    border-radius: 15px;
+    border: var(--option_border);
+    background: linear-gradient(var(--color-size), var(--color-size));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    font-family:var(--all_font-family);
+    
+}   
+
+.laaa>h3:hover{
+    animation: fill 0.5s forwards;
+    
+}   
+@keyframes fill {
+
+  to {
+    background-size: 100% 100%;
+  }
+}
+

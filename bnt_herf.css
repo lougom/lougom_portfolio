@@ -1,0 +1,34 @@
+@import "config_.css";
+
+.conteneur_t_h {
+    padding-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteneur_t_h>h3{
+    font-size: calc(var(--presentation) + 2px);
+    font-family: var(--family_tel);
+}
+.Image_bnt {
+display: block;
+    width: clamp(100px ,15vw ,200px);
+    height: auto;
+    cursor: pointer; 
+    border-radius: 10px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    object-fit: contain;
+}
+
+.Image_bnt:hover {
+    transform: scale(1.05); 
+    filter: brightness(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+.Image_bnt:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,80 @@
+.container_all_language {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.container_language {
+    text-align: center;
+    width: 200px;
+    min-height: 120px; 
+    border-radius: 15px;
+    background-color: rgb(217, 210, 210);
+    
+    /* --- CHANGEMENT MAJEUR ICI --- */
+    display: grid; /* On utilise Grid au lieu de Flex */
+    place-items: center; /* Centre tout verticalement et horizontalement */
+    
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.container_language:hover {
+    transform: translateY(-5px);
+    background-color: rgb(200, 190, 190);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.toggle {
+    display: none;
+}
+
+/* --- GESTION DES TEXTES --- */
+
+.text1, .text2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 20px;
+    transition: all 0.4s ease-out;
+    
+    /* On force les deux textes à être dans la même cellule de la grille */
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.text1 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.text2 {
+    opacity: 0;          /* Invisible pour l'oeil, mais EXISTE pour Google Translate */
+    
+    transform: translateY(15px); /* Part légèrement du bas */
+}
+
+/* --- ACTION AU CLIC --- */
+
+.toggle:checked + .container_language .text1 {
+    opacity: 0;
+    
+    transform: translateY(-15px); /* Monte pour disparaître */
+}
+
+.toggle:checked + .container_language .text2 {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.container_language:active {
+    transform: scale(0.95);
+}

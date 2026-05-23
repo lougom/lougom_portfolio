@@ -1,0 +1,65 @@
+@import 'config_.css';
+
+.conteneur_bnt {
+    
+    position:absolute;
+    padding: 30px;
+    border-radius: 30px;
+    top: 50%;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.32);
+    animation: fadeInScale 0.4s ease-out forwards;
+    backdrop-filter: blur(5px);
+}
+
+.bnt_txt{
+    font-family: var(--family_tel);
+    text-align: center;
+    position: relative;
+}
+#BoutonCV{
+    font-family: var(--family_tel);
+    font-size: large;
+}
+#BoutonCV{
+    
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+}
+
+#BoutonCV:hover {
+    transform: scale(1.05); 
+    filter: brightness(1.2);
+}
+
+#BoutonCV:active {
+    transform: scale(0.95);
+}
+
+paige_boarder>.conteneur_bnt>h2{
+    font-size: var(--fronsize_cv);
+    
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Revient à ta position exacte */
+    }
+}

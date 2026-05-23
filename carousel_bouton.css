@@ -1,0 +1,21 @@
+@import "config_.css";
+
+.carousel-dots {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.carousel-dots{
+    position: absolute;
+    left: 50%;
+    bottom: var(--distance_bottom_carrousel);
+    transform: translateX(-50%);
+}
+.bnt{
+    width: var(--wild_button);
+    height: var(--wild_button);
+    border-radius: 50%;
+    border: 2px solid var(--color_button); 
+
+}
