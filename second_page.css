@@ -76,13 +76,6 @@ padding: 5px;
 font-size: 20vw;
 
 }
-.background{
-    position: absolute;
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
 
 
 

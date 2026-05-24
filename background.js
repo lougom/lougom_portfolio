@@ -23,11 +23,11 @@ setInterval(() => {
     star.animate([
     { 
         left: getRandomArbitrary(10, screen.width) + "px",  
-        top:  getRandomArbitrary(10, screen.height-10) + "px" 
+        top:  getRandomArbitrary(10, screen.height) + "px" 
     }, 
     { 
         left: getRandomArbitrary(10, screen.width) + "px",    
-        top:  getRandomArbitrary(10, screen.height-10) + "px"  
+        top:  getRandomArbitrary(10, screen.height) + "px"  
     }
 ], {
     duration: 20000,     
