@@ -108,7 +108,7 @@ function bloque_submit  () {
     }
 
     
-    if(data.email && (data.email).includes("@") && data.message && data.name && data.tel && data.title){
+    if(data.email && (data.email).includes("@") && (data.email).includes(".") && data.message && data.name && data.tel && data.title){
       go_mail(data);
     }
   });
