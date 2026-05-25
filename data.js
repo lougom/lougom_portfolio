@@ -393,7 +393,6 @@ export default {
         "image": "https://images.icon-icons.com/555/PNG/512/linkedin_icon-icons.com_53609.png"
       }
     },
-    { "phone_number": "06 67 47 36 74" }
   ],
 
   "my cv": [
