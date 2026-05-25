@@ -5,7 +5,10 @@ import a from './data.js';
 
 // Création des option carrousel  
 let i = 0
+
+
 for (const [key, value] of Object.entries(a)) {
+  
   const li = document.createElement("li");
   li.tabIndex = 0;
   li.className = "laaa";
@@ -32,6 +35,13 @@ for (const [key, value] of Object.entries(a)) {
   i++
   
 }
+    document.addEventListener("keydown", (event) => {
+      // Vérifie si la touche pressée est bien 'Escape'
+      if (event.key === "Enter") {
+        click_Carrousel();        
+          
+      }
+  });
 
 
 function click_Carrousel () { 
@@ -69,7 +79,13 @@ function click_Carrousel () {
     page.innerHTML = ""
   });
 
-  
+  document.addEventListener("keydown", (event) => {
+    // Vérifie si la touche pressée est bien 'Escape'
+    if (event.key === "Escape") {
+      
+        page.innerHTML = ""; 
+    }
+  });
 
   try{
     
