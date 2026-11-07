@@ -1,4 +1,5 @@
 export default {
+
   "me": [
     {
       "title": "Journey of a young developer: from dyslexia to mastering AI"
@@ -24,11 +25,10 @@ export default {
   ],
 
   "projet": [
-    {
+    {"under_block":{
       "title": "ELIZA",
       "date": "30/03/2026 - 16/04/2026",
-      "description": "During this 18‑day project I worked with a partner to implement a Small Language Model (SLM) in a Discord bot named Aeroguid. The bot acts as a virtual travel agency: it presents flight and accommodation suggestions, answers users’ questions, and, via tool calls, queries an unlimited database without saturating the model’s memory. After the bot succeeded, we built a simple web interface (HTML + CSS + JavaScript) for administering it; the JavaScript communicates with the port where Ollama hosts the model. We also provided a .sh auto‑install script that prepares the Python environment, downloads the Ollama models, creates the `.env` file containing all secret keys, and then launches the bot on the Discord server using the token. This project let us evaluate several models, analyze their performance and drawbacks, and deliver a qualitative, immediately usable Discord tool to the client."
-      ,
+      "description": "During this 18‑day project I worked with a partner to implement a Small Language Model (SLM) in a Discord bot named Aeroguid. The bot acts as a virtual travel agency: it presents flight and accommodation suggestions, answers users’ questions, and, via tool calls, queries an unlimited database without saturating the model’s memory. After the bot succeeded, we built a simple web interface (HTML + CSS + JavaScript) for administering it; the JavaScript communicates with the port where Ollama hosts the model. We also provided a .sh auto‑install script that prepares the Python environment, downloads the Ollama models, creates the `.env` file containing all secret keys, and then launches the bot on the Discord server using the token. This project let us evaluate several models, analyze their performance and drawbacks, and deliver a qualitative, immediately usable Discord tool to the client.",
       "language": [
         {
           "Python": {
@@ -67,9 +67,9 @@ export default {
           }
         }
       ]
+    }
     },
-
-    {
+    {"under_block":{
       "title": "Alice's Adventures in Wonderland",
       "date": "16/03/2026-26/03/2026",
       "description": "During this 10‑day project I worked in a team to develop a Python script that summarizes books from the Project Gutenberg library. The script requests the books, parses the HTML with BeautifulSoup to extract chapters, streams the content for smoother processing, and provides a command‑line interface (CLI) for user interaction. The extracted text is then fed to a small NLP pipeline that generates concise summaries of each book.",
@@ -93,9 +93,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Supermarket Business Insights – CSV Analysis and Modeling",
       "date": "02/03/2026-12/03/2026",
       "description": "In a 3‑person team we leveraged a large CSV dataset from a supermarket to answer eight business questions (e.g., which products are bought after chocolate, which items are placed first, etc.). We read and cleaned the CSV with pandas, visualized statistics and correlations using matplotlib, and built two linear regression models: one predicts the product most likely to be bought next from a customer ID, the other estimates the time (in days) before a customer’s next purchase. The experience reinforced my skills in exploratory analysis, data visualization, and predictive modeling on real data.",
@@ -125,9 +125,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "TARDIS – Modeling Train Delays for SNCF",
       "date": "23/02/2026-27/02/2026",
       "description": "The project was carried out in a 3‑person team: based on a large CSV file supplied by SNCF (columns: train_id, origin, destination, date, scheduled arrival time, delay, etc.) we built a linear‑regression model to estimate the number of delay minutes for a train from its route and the month of the year. The workflow included cleaning and enriching the data, feature‑engineering (extracting the month, encoding stations), training the model, evaluating and visualizing predictions. The experience deepened my skills in handling large datasets and predictive modeling with Python.",
@@ -157,9 +157,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Data Bootcamp – Python & NoSQL Training",
       "date": "09/02/2026-23/02/2026",
       "description": "During two weeks this bootcamp focused on mastering Python (object‑oriented programming, best practices), using Jupyter Notebook for interactive development, and learning NoSQL with MongoDB. I performed several data‑analysis exercises such as working with the Iris dataset via pandas, which strengthened my ability to clean, transform, and visualise data. The experience gave me a deep understanding of the Python ecosystem and its main data‑science modules.",
@@ -189,9 +189,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Development of an MVP Geo‑Located Social Network (inspired by HALO Voisin / Instagram)",
       "date": "05/01/2026-30/01/2026",
       "description": "For 25 days I completed a full project – from personas, competitor‑benchmarking, and user‑journey modelling, to UI/UX design on Figma (wireframes → mock‑ups → interactive prototype) – and developed a Minimum Viable Product (MVP) focused on content sharing and geolocation. The front‑end (HTML, CSS, JavaScript) reproduced the prototype and consumed a geolocation API. The back‑end was an Express.js (Node.js) server with dotenv, mysql2, jsonwebtoken and bcrypt for user management, authentication and secure password storage. The database is MySQL, managed via DBeaver CE. A third‑party geolocation API provided the GPS coordinates of the user’s device.",
@@ -239,9 +239,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "e‑Hack & Juice_",
       "date": "01/12/2025-19/12/2025",
       "description": "During these 19 days I carried out a two‑person cybersecurity project in which we were tasked with hacking and extracting flags from the online Juice Shop webstore. I used Burp Suite and the element inspector.",
@@ -259,9 +259,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "e‑Todo_",
       "date": "03/11/2025-28/11/2025",
       "description": "During these 25 days I was part of a team of 3 to build a web To‑Do list app. It runs with a back‑end that uses DBeaver CE for visualising MySQL, while the front‑end is built with CSS, HTML and JavaScript. The tools used were: Express.js, CSS, HTML, JavaScript, DBeaver CE.",
@@ -285,9 +285,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Piscine web",
       "date": "13/10/2025-29/10/2025",
       "description": "During 16 days I completed a web‑development bootcamp. The languages I encountered were PHP, HTML, CSS and JavaScript.",
@@ -317,9 +317,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Piscine fondatrice Python",
       "date": "13/6/2025-10/6/2025",
       "description": "During this week I completed a Python bootcamp.",
@@ -331,11 +331,11 @@ export default {
           }
         }
       ]
-    }
+    }}
   ],
 
   "my expérience": [
-    {
+    {"under_block":{
       "title": "Volunteer July 2025 at Saint‑Louis Medical Office, Reunion",
       "description_mor": [
         {
@@ -345,9 +345,9 @@ export default {
           },
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Volunteer January 2025 and January 2024 at Le Duigou Racing, Rennes",
       "description_mor": [
         {
@@ -357,9 +357,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Volunteer January 2024 and January 2022 at Reech, Rennes",
       "description_mor": [
         {
@@ -369,9 +369,9 @@ export default {
           }
         }
       ]
-    },
+    }},
 
-    {
+    {"under_block":{
       "title": "Intern November 2021 to December 2021 at REM Le Port, Reunion",
       "description_mor": [
         {
@@ -381,7 +381,7 @@ export default {
           }
         }
       ]
-    }
+    }},
   ],
 
   "contact": [
