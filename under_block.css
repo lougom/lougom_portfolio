@@ -1,0 +1,167 @@
+/* =====================================================================
+   UNDER BLOCK : pastilles cliquables (beaucoup de thèmes / projets)
+   Style sobre, dans l'ambiance du fond : verre sombre + fine teinte.
+   Chaque pastille reprend une teinte parmi 8 (via --h), très discrète.
+   Un seul mouvement permanent : un léger flottement très lent.
+   ===================================================================== */
+
+.container_all_under_block {
+    --h: 235;                  /* teinte (0-360) */
+    --float-time: 7s;
+    --delay: 0s;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    max-width: calc(100% - 20px);
+    margin: 8px 8px;
+    padding: clamp(10px, 0.8vw + 4px, 16px) clamp(18px, 1.6vw + 6px, 30px);
+
+    color: var(--text, #e2e8f0);
+    background: linear-gradient(
+        135deg,
+        hsl(var(--h) 70% 65% / 0.14),
+        hsl(var(--h) 70% 65% / 0.05)
+    );
+    border: 1px solid hsl(var(--h) 70% 72% / 0.30);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation:
+        ub-appear 0.6s ease both,
+        ub-float var(--float-time) ease-in-out infinite;
+    animation-delay: var(--delay), var(--delay);
+}
+
+.text_under_block {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: clamp(14px, 0.5vw + 10px, 18px);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: var(--text, #e2e8f0);
+}
+
+/* ---------- Survol ---------- */
+.container_all_under_block:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(
+        135deg,
+        hsl(var(--h) 70% 65% / 0.24),
+        hsl(var(--h) 70% 65% / 0.10)
+    );
+    border-color: hsl(var(--h) 80% 78% / 0.65);
+    box-shadow: 0 8px 22px hsl(var(--h) 70% 50% / 0.22);
+    animation-play-state: running, paused;   /* le flottement se fige au survol */
+}
+
+/* ---------- Clic ---------- */
+.container_all_under_block:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+}
+
+/* ---------- Clavier ---------- */
+.container_all_under_block:focus-visible {
+    outline: 2px solid hsl(var(--h) 80% 78%);
+    outline-offset: 3px;
+}
+
+/* =====================================================================
+   8 TEINTES qui se répètent (et décalages différents pour le flottement)
+   ===================================================================== */
+.container_all_under_block:nth-child(8n+1) { --h: 235; --float-time: 7s;   --delay: 0s;   }
+.container_all_under_block:nth-child(8n+2) { --h: 195; --float-time: 8s;   --delay: 0.2s; }
+.container_all_under_block:nth-child(8n+3) { --h: 160; --float-time: 7.5s; --delay: 0.4s; }
+.container_all_under_block:nth-child(8n+4) { --h: 275; --float-time: 8.5s; --delay: 0.6s; }
+.container_all_under_block:nth-child(8n+5) { --h: 215; --float-time: 7.2s; --delay: 0.8s; }
+.container_all_under_block:nth-child(8n+6) { --h: 320; --float-time: 8.2s; --delay: 1s;   }
+.container_all_under_block:nth-child(8n+7) { --h: 180; --float-time: 7.8s; --delay: 1.2s; }
+.container_all_under_block:nth-child(8n+8) { --h: 255; --float-time: 8.8s; --delay: 1.4s; }
+
+/* =====================================================================
+   ANIMATIONS
+   ===================================================================== */
+@keyframes ub-appear {
+    0%   { opacity: 0; scale: 0.94; }
+    100% { opacity: 1; scale: 1; }
+}
+
+@keyframes ub-float {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -2px; }
+}
+
+/* =====================================================================
+   MISE EN PAGE RESPONSIVE
+   Quand une page contient des pastilles, le panneau devient une grille
+   souple : pastilles centrées, retour à la ligne propre.
+   ===================================================================== */
+paige_boarder:has(> .container_all_under_block) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-inline: clamp(10px, 4%, 70px);
+    padding-top: clamp(28px, 6vh, 64px);      /* 1re rangée loin du bord */
+    padding-bottom: 120px;                    /* dernière rangée au-dessus de la croix */
+}
+
+paige_boarder:has(> .container_all_under_block) > :not(.container_all_under_block) {
+    flex: 0 0 auto;
+}
+
+paige_boarder:has(> .container_all_under_block) > h1,
+paige_boarder:has(> .container_all_under_block) > h3,
+paige_boarder:has(> .container_all_under_block) > .Bottom_all {
+    width: 100%;
+}
+
+@media (min-width: 1500px) {
+    .container_all_under_block {
+        margin: 10px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    paige_boarder:has(> .container_all_under_block) {
+        padding-inline: 12px;
+    }
+}
+
+/* Téléphones : une pastille par ligne, pleine largeur */
+@media (max-width: 600px) {
+    .container_all_under_block {
+        flex: 1 1 100%;
+        max-width: none;
+        margin: 6px 8px;
+        text-align: center;
+    }
+    .text_under_block {
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .container_all_under_block {
+        animation: none;
+    }
+}
