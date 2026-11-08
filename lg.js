@@ -52,11 +52,16 @@ carousel.addEventListener("click" , (event) => {
 const buttons = document.querySelectorAll(".bnt");
 
 
-document.getElementById("carousel-dots").addEventListener("click", () => {
-  const bnt_select = (event.target.closest(".bnt").id);
-  const item_id  = document.querySelectorAll("li>h2")[bnt_select]
-  item_id.focus();
-  item_id.scrollIntoView({behavior: 'smooth'})
+document.getElementById("carousel-dots").addEventListener("click", (event) => {
+  const btn = event.target.closest(".bnt");
+  if (!btn) return;
+  const slide = carousel.children[btn.id];
+  if (!slide) return;
+  // Défilement horizontal du carrousel uniquement (scrollIntoView/focus faisaient scroller toute la page)
+  const left = carousel.scrollLeft
+    + slide.getBoundingClientRect().left - carousel.getBoundingClientRect().left
+    - (carousel.clientWidth - slide.clientWidth) / 2;
+  carousel.scrollTo({ left, behavior: 'smooth' });
 });
 
 
