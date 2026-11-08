@@ -7,7 +7,6 @@ html, body {
     padding: 0;
     gap: 0;
     overflow: hidden;
-    overflow: clip;    /* interdit même le défilement fait par le JS (scrollIntoView) */
 }
 
 body {
