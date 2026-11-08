@@ -5,10 +5,7 @@ import a from './data.js';
 
 // Création des option carrousel  
 let i = 0
-
-
 for (const [key, value] of Object.entries(a)) {
-  
   const li = document.createElement("li");
   li.tabIndex = 0;
   li.className = "laaa";
@@ -35,81 +32,15 @@ for (const [key, value] of Object.entries(a)) {
   i++
   
 }
-    document.addEventListener("keydown", (event) => {
-      // Vérifie si la touche pressée est bien 'Escape'
-      if (event.key === "Enter") {
-        click_Carrousel();        
-          
-      }
-  });
 
 
 function click_Carrousel () { 
 
   const slide = view_item[index_def].id;
-  
-  
   if (!slide) return;
-  page.innerHTML = ""
-  const title = slide;
-  
-  
 
-  page.innerHTML=`
-  <page clas ="page"></page>
-  <paige_Boarder></paige_Boarder>
-  `
-
-  
-  const container_cross = document.createElement("div");
-  const cross_1 = document.createElement("div");
-  const cross_2 = document.createElement("div");
-  container_cross.className = "container"
-  cross_1.className = "cross a";
-  cross_2.className = "cross b";
-
-  container_cross.appendChild(cross_1)
-  container_cross.appendChild(cross_2)
-
-  page.appendChild(container_cross)
-
-  
-  const sckip = document.querySelector(".container");
-  sckip.addEventListener("click", () => {
-    page.innerHTML = ""
-  });
-
-  document.addEventListener("keydown", (event) => {
-    // Vérifie si la touche pressée est bien 'Escape'
-    if (event.key === "Escape") {
-      
-        page.innerHTML = ""; 
-    }
-  });
-
-  try{
-    
-    
-   
-    
-    
-    for (let i = 0; i <((a[title].length)); i++) {
-      
-      if (a[title] !== undefined) {
-        
-        for ( const [key, value ] of Object.entries(a[title][i])){
-          element_Create([key,value]);
-        };
-      }
-    }
-    const page_data = document.querySelector("paige_Boarder")
-    const Bottom  = document.createElement("div");
-    Bottom.className =  "Bottom_all";
-    page_data.appendChild(Bottom);
-
-  }catch(error){
-    console.error("go to function ::: " , error);
-  };
+  pageStack.length = 0;      // nouvelle ouverture depuis le carrousel : on repart de zéro
+  openPage(a[slide]);        // voir shared.js
 };
 
   // Clic sur un slide

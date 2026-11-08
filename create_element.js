@@ -46,7 +46,7 @@ function element_Create (Dictionary) {
 
   if (Dictionary[0] == "my_cv"){
     
-     element_Create_cv (Dictionary) 
+     element_Create_cv () 
   };
 
   if (Dictionary[0] == "description_mor"){
@@ -55,5 +55,9 @@ function element_Create (Dictionary) {
 
   if (Dictionary[0] == "href_clic_but"){
     element_Create_bloc_hetf(Dictionary);
+  };
+
+  if (Dictionary[0] == "under_block"){
+    element_Create_under_block(Dictionary);
   };
 }

@@ -1,65 +1,76 @@
 @import 'config_.css';
 
 .conteneur_bnt {
-    
-    position:absolute;
+    position: absolute;
+    box-sizing: border-box;
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 24px;
     top: 50%;
     width: 60%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    background-color: rgba(0, 0, 0, 0.32);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     animation: fadeInScale 0.4s ease-out forwards;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
-.bnt_txt{
+@media (max-width: 800px) {
+    .conteneur_bnt {
+        width: 88%;
+    }
+}
+
+.bnt_txt {
     font-family: var(--family_tel);
     text-align: center;
     position: relative;
+    color: var(--text);
 }
-#BoutonCV{
+
+#BoutonCV {
+    position: relative;
+    padding: 16px 38px;
+    border-radius: 12px;
     font-family: var(--family_tel);
     font-size: large;
-}
-#BoutonCV{
-    
-    position: relative;
-    padding: 30px;
-    border-radius: 10px;
-    
+    font-weight: 500;
+    color: #fff;
+    background: rgba(99, 102, 241, 0.85);
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-    border: none;
+    border: 1px solid rgba(165, 180, 252, 0.4);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 #BoutonCV:hover {
-    transform: scale(1.05); 
-    filter: brightness(1.2);
+    transform: translateY(-2px);
+    background: rgba(99, 102, 241, 1);
+    box-shadow: 0 10px 26px rgba(99, 102, 241, 0.3);
 }
 
 #BoutonCV:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 
-paige_boarder>.conteneur_bnt>h2{
+paige_boarder > .conteneur_bnt > h2 {
     font-size: var(--fronsize_cv);
-    
+    color: var(--text);
+    text-align: center;
 }
 
 @keyframes fadeInScale {
     0% {
         opacity: 0;
-        transform: translate(-50%, -60%); 
+        transform: translate(-50%, -58%);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%); /* Revient à ta position exacte */
+        transform: translate(-50%, -50%);
     }
 }

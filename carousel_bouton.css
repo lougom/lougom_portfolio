@@ -4,18 +4,30 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
-
-.carousel-dots{
     position: absolute;
     left: 50%;
     bottom: var(--distance_bottom_carrousel);
     transform: translateX(-50%);
 }
-.bnt{
+
+.bnt {
+    box-sizing: border-box;
     width: var(--wild_button);
     height: var(--wild_button);
     border-radius: 50%;
-    border: 2px solid var(--color_button); 
+    border: 2px solid var(--color_button);
+    background: var(--glass-bg);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+}
 
+.bnt:hover {
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+}
+
+.bnt:active {
+    transform: scale(0.92);
 }

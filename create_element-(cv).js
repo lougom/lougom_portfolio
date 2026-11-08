@@ -1,4 +1,4 @@
-function element_Create_cv (Dictionary) {
+function element_Create_cv () {
   const page_data  = document.querySelector('paige_boarder');
   const conteneur_bnt = document.createElement('div');
   conteneur_bnt.className = "conteneur_bnt"; 
