@@ -70,9 +70,11 @@ h1 {
 
 /* Fond : dégradé sombre avec halos colorés */
 .background {
-    position: absolute;
+    position: fixed;
+    inset: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden; /* les étoiles ne doivent jamais dépasser de l'écran */
     z-index: -1;
     background:
         radial-gradient(ellipse at 15% 10%, rgba(99, 102, 241, 0.22), transparent 55%),
