@@ -8,7 +8,7 @@ return Math.random() * (max - min) + min;
 };
 
 
-/*              S  N      */
+/*               S  N      */
 const Nombre = [ 2, 60]
 
 
