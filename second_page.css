@@ -1,9 +1,9 @@
 @import 'config_.css';
 
-/* Pas de zoom au double-tap (la page est verrouillée en overflow hidden, un zoom la casse).
-   Appliqué à tous les éléments car le carrousel est un conteneur scrollable à part. */
+/* Pas de zoom (double-tap ni pincement) : la page est verrouillée en overflow hidden,
+   un zoom la casse. Appliqué à tous les éléments car le carrousel est un conteneur scrollable à part. */
 * {
-    touch-action: manipulation;
+    touch-action: pan-x pan-y;
 }
 
 html, body {
