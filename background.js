@@ -1,4 +1,5 @@
 const background = document.querySelector('.background');
+const blow = document.querySelector('.Blow');
 
 /* random number */
 function getRandomArbitrary(min, max) {
@@ -20,14 +21,21 @@ setInterval(() => {
     star.style.backgroundColor = `rgb(${getRandomArbitrary(0,255)}, ${getRandomArbitrary(0,255)}, ${getRandomArbitrary(0,255)})`;
     star.style.animation= `star_color ${Nombre[0]}s infinite`;
 
+    // Les étoiles apparaissent uniquement dans le rectangle de la div .Blow
+    // (.background est en fixed + inset 0 : ses coordonnées = celles de la fenêtre)
+    const r = blow.getBoundingClientRect();
+    const starSize = parseFloat(sise);
+    const randomLeft = () => getRandomArbitrary(r.left, Math.max(r.left, r.right - starSize)) + "px";
+    const randomTop  = () => getRandomArbitrary(r.top,  Math.max(r.top,  r.bottom - starSize)) + "px";
+
     star.animate([
     {
-        left: getRandomArbitrary(1, 98) + "%",
-        top:  getRandomArbitrary(1, 98) + "%"
+        left: randomLeft(),
+        top:  randomTop()
     },
     {
-        left: getRandomArbitrary(1, 98) + "%",
-        top:  getRandomArbitrary(1, 98) + "%"
+        left: randomLeft(),
+        top:  randomTop()
     }
 ], {
     duration: 20000,     
