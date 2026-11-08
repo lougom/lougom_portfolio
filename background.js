@@ -21,13 +21,13 @@ setInterval(() => {
     star.style.animation= `star_color ${Nombre[0]}s infinite`;
 
     star.animate([
-    { 
-        left: getRandomArbitrary(10, screen.width) + "px",  
-        top:  getRandomArbitrary(10, screen.height) + "px" 
-    }, 
-    { 
-        left: getRandomArbitrary(10, screen.width) + "px",    
-        top:  getRandomArbitrary(10, screen.height) + "px"  
+    {
+        left: getRandomArbitrary(10, window.innerWidth) + "px",
+        top:  getRandomArbitrary(10, window.innerHeight) + "px"
+    },
+    {
+        left: getRandomArbitrary(10, window.innerWidth) + "px",
+        top:  getRandomArbitrary(10, window.innerHeight) + "px"
     }
 ], {
     duration: 20000,     

@@ -55,8 +55,9 @@ const buttons = document.querySelectorAll(".bnt");
 document.getElementById("carousel-dots").addEventListener("click", () => {
   const bnt_select = (event.target.closest(".bnt").id);
   const item_id  = document.querySelectorAll("li>h2")[bnt_select]
-  item_id.focus();  
-  item_id.scrollIntoView({behavior: 'smooth'})
+  item_id.focus({ preventScroll: true });
+  // block: "nearest" => défilement horizontal du carrousel uniquement, la page ne monte plus
+  item_id.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 });
 
 

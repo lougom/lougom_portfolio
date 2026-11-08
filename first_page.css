@@ -70,9 +70,9 @@ h1 {
 
 /* Fond : dégradé sombre avec halos colorés */
 .background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: fixed;       /* reste collé à l'écran, même si la page défilait */
+    inset: 0;
+    overflow: hidden;
     z-index: -1;
     background:
         radial-gradient(ellipse at 15% 10%, rgba(99, 102, 241, 0.22), transparent 55%),
