@@ -1,25 +1,25 @@
 export default {
   "me": [
     {
-        "title": "Journey of a young developer: from dyslexia to mastering AI"
+      "title": "Journey of a young developer: from dyslexia to mastering AI"
     },
     {
-        "description": "I am Louis Gomard, 18 years old. I obtained my technical baccalaureate with distinction and pursue computer science at Épitech."
+      "description": "I am Louis Gomard, a computer science student at Épitech. I obtained my technical baccalaureate with distinction."
     },
     {
-        "description": "My journey began with a BUT GEII in Rennes, which proved difficult due to my dyslexia. However, programming courses there revealed my passion for CS."
+      "description": "My journey began with a BUT GEII, which proved difficult due to my dyslexia. However, programming courses there revealed my passion for CS."
     },
     {
-        "description": "During my final year of STI2D, I developed a text-to-speech tool to read everything on my computer, giving me my first hands-on experience with AI models."
+      "description": "During my final year of STI2D, I developed a text-to-speech tool to read everything on my computer, giving me my first hands-on experience with AI models."
     },
     {
-        "description": "Curious by nature, I explore CS, tinkering, and AI. I master several languages and technologies: Python, PHP, SQL, JavaScript, HTML, CSS, N8N, plus various Python libraries for AI, graph visualization, and CSV handling. I also have a B2 level in English."
+      "description": "Curious by nature, I explore CS, tinkering, and AI. I master several languages and technologies: Python, PHP, SQL, JavaScript, HTML, CSS, N8N, plus various Python libraries for AI, graph visualization, and CSV handling. I also have a B2 level in English."
     },
     {
-        "description": "At Épitech, I prioritize local language models (SLMs) over large cloud models (LLMs). This approach guarantees confidentiality, reduces energy consumption, and allows me to explore AI nuances through compact, performant models tailored to my machine. I enjoy discovering the most efficient and interesting models for key tasks."
+      "description": "At Épitech, I prioritize local language models (SLMs) over large cloud models (LLMs). This approach guarantees confidentiality, reduces energy consumption, and allows me to explore AI nuances through compact, performant models tailored to my machine. I enjoy discovering the most efficient and interesting models for key tasks."
     },
     {
-        "description": "I hold the Recognition of the Quality of a Disabled Worker (RQTH), which grants me specific accommodations and support in my studies and projects. This recognition strengthens my resilience and commits me to turning the challenges of my disability into forces that drive innovation and excellence in computer science."
+      "description": "I hold the Recognition of the Quality of a Disabled Worker (RQTH), which grants me specific accommodations and support in my studies and projects. I turn the challenges of my disability into strengths that drive innovation and excellence in computer science."
     }
   ],
 
@@ -207,19 +207,78 @@ export default {
 
   "my expérience": [
     {"under_block":{
-      "title": "Volunteer July 2025 at Saint‑Louis Medical Office, Reunion",
+      "title": "Intern 2026 at iCube, Switzerland",
+      "description_mor": [
+        {
+          "Transcription pipeline": {
+            "def": "First project: design of a processing chain for a psychologist's office, going from audio recording to speech-to-text transcription, then anonymization of the text, then automatic summarization, with the possibility of sending the result to other tools. I led a deep research phase with comparison tables and a specification document that I wrote myself.",
+            "url": ""
+          }
+        },
+        {
+          "GLiNER2": {
+            "def": "Named entity recognition model used for the anonymization step of the pipeline, to detect and mask personal information in transcribed texts",
+            "url": "https://github.com/fastino-ai/GLiNER2"
+          }
+        },
+        {
+          "After-sales RAG assistant": {
+            "def": "Second project: evaluation of a RAG language model for after-sales service. Repair tickets written by technicians were fed into the system: when a customer, for example a cheesemaker, describes a problem, the model retrieves how the same problem was fixed before, so that a technician, from the same company or another, can repair it faster",
+            "url": ""
+          }
+        },
+        {
+          "MCP server": {
+            "def": "Third project: I built a first MCP server from scratch, re-implementing the protocol myself, with a Python script that calls the Rationalk API using the company's API key. I connected it to LM Studio with local models, then tested it with Claude Desktop, where it worked quite well, and with Gemini CLI",
+            "url": "https://rationalk.ch/"
+          }
+        },
+        {
+          "Python": {
+            "def": "Script making API calls to Rationalk and exposing its features through the MCP protocol",
+            "url": ""
+          }
+        },
+        {
+          "LM Studio": {
+            "def": "Local hosting of language models used to test the MCP server",
+            "url": ""
+          }
+        },
+        {
+          "Company insight": {
+            "def": "Observed how the company works day to day: its organization, its working methods and how projects go from the client's need to the delivered solution",
+            "url": ""
+          }
+        },
+        {
+          "Teamwork": {
+            "def": "Worked alongside a salesperson and a developer, a very complementary team that gave me a view of both the business and the technical side of an AI project",
+            "url": ""
+          }
+        },
+        {
+          "Client visits": {
+            "def": "Took part in on-site visits to clients to see how the tools are used in practice. I particularly enjoyed this human interaction: talking with clients and understanding their needs",
+            "url": ""
+          }
+        }
+      ]
+    }},
+    {"under_block":{
+      "title": "Volunteer 2025 at a medical office, Reunion",
       "description_mor": [
         {
           "Observation": {
             "def": "Observation of the use of computers in a general medical office",
             "url": ""
-          },
+          }
         }
       ]
     }},
 
     {"under_block":{
-      "title": "Volunteer January 2025 and January 2024 at Le Duigou Racing, Rennes",
+      "title": "Volunteer 2025 and 2024 at Le Duigou Racing",
       "description_mor": [
         {
           "Préparation": {
@@ -231,7 +290,7 @@ export default {
     }},
 
     {"under_block":{
-      "title": "Volunteer January 2024 and January 2022 at Reech, Rennes",
+      "title": "Volunteer 2024 and 2022 at Reech",
       "description_mor": [
         {
           "Observation": {
@@ -243,7 +302,7 @@ export default {
     }},
 
     {"under_block":{
-      "title": "Intern November 2021 to December 2021 at REM Le Port, Reunion",
+      "title": "Intern 2021 at REM",
       "description_mor": [
         {
           "Gestion": {
@@ -252,7 +311,7 @@ export default {
           }
         }
       ]
-    }},
+    }}
   ],
 
   "contact": [
