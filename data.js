@@ -19,6 +19,9 @@ export default {
       "description": "At Épitech, I prioritize local language models (SLMs) over large cloud models (LLMs). This approach guarantees confidentiality, reduces energy consumption, and allows me to explore AI nuances through compact, performant models tailored to my machine. I enjoy discovering the most efficient and interesting models for key tasks."
     },
     {
+      "description": "Later on, I want to specialize in automating business workflows with AI: building custom models and agents tailored to a type of user, and connecting them to the tools companies already use. I enjoy working close to clients, understanding their needs, and turning them into concrete results."
+    },
+    {
       "description": "I hold the Recognition of the Quality of a Disabled Worker (RQTH), which grants me specific accommodations and support in my studies and projects. I turn the challenges of my disability into strengths that drive innovation and excellence in computer science."
     }
   ],
